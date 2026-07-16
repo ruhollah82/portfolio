@@ -1,4 +1,34 @@
 {
-  "test.greeting": "سلام، دنیا!",
-  "test.role": "توسعه‌دهنده فرانت‌اند · دانشجوی کامپیوتر"
+  "nav.about": "درباره من",
+  "nav.skills": "مهارت‌ها",
+  "nav.projects": "پروژه‌ها",
+  "nav.contact": "تماس",
+
+  "hero.greeting": "سلام، من روح‌الله هستم.",
+  "hero.role": "توسعه‌دهنده فرانت‌اند · دانشجوی کامپیوتر · NLP فارسی",
+  "hero.scroll": "اسکرول",
+
+  "about.title": "درباره من",
+  "about.text": "من دانشجوی کامپیوتر و توسعه‌دهنده فرانت‌اند با علاقه عمیق به NLP فارسی هستم. من اپلیکیشن‌های وب مدرن و در دسترس می‌سازم و تقاطع اسکریپت‌های heritage و ابزارهای معاصر را کاوش می‌کنم. کارهای من از مهندسی React/3D تا واژه‌نامه‌های احساسی ParsBERT را شامل می‌شود.",
+
+  "skills.title": "مهارت‌ها",
+  "skills.frontend": "فرانت‌اند",
+  "skills.3d": "سه‌بعدی و موشن",
+  "skills.backend": "بک‌اند و ابزارها",
+  "skills.ml": "یادگیری ماشین و NLP",
+
+  "projects.title": "پروژه‌ها",
+  "projects.voteria.title": "Voteria",
+  "projects.voteria.desc": "پلتفرم بحث اجتماعی الهام‌گرفته از ردیت. مدیریت استیت بلادرنگ با Zustand، گردش کار collaborative گیت.",
+  "projects.lexicon.title": "واژه‌نامه احساسی فارسی",
+  "projects.lexicon.desc": "تولید واژه‌نامه احساسی مبتنی بر ParsBERT/MLM از نظرات دیجی‌کالا، با انتخاب قالب آگاه از POS.",
+  "projects.hooshtan.title": "هوشتن فیت",
+  "projects.hooshtan.desc": "اپلیکیشن اندروید از طریق Capacitor + تشخیص حالت MediaPipe. موبایل کراس‌پلتفرم و دیباگ پل بومی.",
+  "projects.icpc.title": "سایت مسابقات ICPC",
+  "projects.icpc.desc": "معماری Astro 7 + React islands. ارزیابی tradeoffهای فریم‌ورک برای سایت‌های استاتیک با عملکرد بالا.",
+
+  "contact.title": "تماس",
+  "contact.text": "من همیشه برای بحث درباره پروژه‌های جدید، ایده‌های خلاقانه یا فرصت‌هایی برای بودن در بخش دیگری از چشم‌اندازهای شما باز هستم.",
+  "contact.email": "ایمیل",
+  "contact.resume": "دانلود رزومه"
 }

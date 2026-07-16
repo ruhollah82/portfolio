@@ -1,4 +1,34 @@
 {
-  "test.greeting": "Hello, World!",
-  "test.role": "Frontend Developer · CS Student"
+  "nav.about": "About",
+  "nav.skills": "Skills",
+  "nav.projects": "Projects",
+  "nav.contact": "Contact",
+
+  "hero.greeting": "Hello, I'm Ruhollah.",
+  "hero.role": "Frontend Developer · CS Student · Persian NLP",
+  "hero.scroll": "Scroll",
+
+  "about.title": "About",
+  "about.text": "I am a CS student and frontend developer with a deep interest in Persian NLP. I build modern, accessible web applications and explore the intersection of heritage scripts and contemporary tooling. My work spans from React/3D engineering to ParsBERT sentiment lexicons.",
+
+  "skills.title": "Skills",
+  "skills.frontend": "Frontend",
+  "skills.3d": "3D & Motion",
+  "skills.backend": "Backend & Tooling",
+  "skills.ml": "ML & NLP",
+
+  "projects.title": "Projects",
+  "projects.voteria.title": "Voteria",
+  "projects.voteria.desc": "Reddit-inspired community discussion platform. Real-time state management with Zustand, collaborative Git workflow.",
+  "projects.lexicon.title": "Persian Sentiment Lexicon",
+  "projects.lexicon.desc": "ParsBERT/MLM-based sentiment lexicon generation from Digikala reviews, with POS-aware template selection.",
+  "projects.hooshtan.title": "Hooshtan Fit",
+  "projects.hooshtan.desc": "Android app via Capacitor + MediaPipe pose detection. Cross-platform mobile and native-bridge debugging.",
+  "projects.icpc.title": "ICPC Contest Site",
+  "projects.icpc.desc": "Astro 7 + React islands architecture. Evaluating framework tradeoffs for high-performance static sites.",
+
+  "contact.title": "Contact",
+  "contact.text": "I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+  "contact.email": "Email",
+  "contact.resume": "Download Resume"
 }
