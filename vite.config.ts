@@ -5,11 +5,14 @@ import tailwindcss from '@tailwindcss/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
+  // 👇 IMPORTANT: Use the repository name with slashes, NOT the full URL
+  base: '/portfolio/',
+
   plugins: [
     react(),
     tailwindcss(),
     visualizer({
-      open: true, // Automatically open the report in your browser
+      open: false,
       gzipSize: true,
       brotliSize: true,
     }),

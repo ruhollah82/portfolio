@@ -7,21 +7,25 @@ const projects = [
     titleKey: 'projects.voteria.title',
     descKey: 'projects.voteria.desc',
     tags: ['React', 'TypeScript', 'Zustand'],
+    link: 'https://github.com/ruhollah82/voteria-frontend',
   },
   {
     titleKey: 'projects.lexicon.title',
     descKey: 'projects.lexicon.desc',
     tags: ['ParsBERT', 'PyTorch', 'NLP'],
+    link: '',
   },
   {
     titleKey: 'projects.hooshtan.title',
     descKey: 'projects.hooshtan.desc',
     tags: ['Capacitor', 'MediaPipe', 'Android'],
+    link: '',
   },
   {
     titleKey: 'projects.icpc.title',
     descKey: 'projects.icpc.desc',
     tags: ['Astro', 'React', 'Islands'],
+    link: '',
   },
 ]
 

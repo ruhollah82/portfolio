@@ -11,7 +11,6 @@ function pseudoRandom(seed: number): number {
   return x - Math.floor(x)
 }
 
-// همون فرمول noise قبلی، فقط پورت‌شده به GLSL
 const vertexShader = /* glsl */ `
   uniform float uTime;
   uniform float uScroll;
@@ -63,7 +62,6 @@ export function ParticleField({ scrollYProgress }: ParticleFieldProps) {
   const prefersReducedMotion = useReducedMotion()
   const groupRef = useRef<THREE.Group>(null!)
 
-  // این هنوز یه بار روی CPU حساب می‌شه (موقع mount)، نه هر فریم — مشکلی نداره
   const { positions, colors } = useMemo(() => {
     const positions = new Float32Array(COUNT * 3)
     const colors = new Float32Array(COUNT * 3)
@@ -110,11 +108,9 @@ export function ParticleField({ scrollYProgress }: ParticleFieldProps) {
     const time = state.clock.elapsedTime
     const scroll = scrollYProgress.get()
 
-    // چرخش کل گروه هزینه‌ی ناچیزی داره (یه ترنسفرم، نه ۴۰۰۰ تا)
     groupRef.current.rotation.y = time * 0.08 + scroll * Math.PI * 1.5
     groupRef.current.rotation.x = Math.sin(time * 0.05) * 0.15
 
-    // فقط ۴ تا عدد آپدیت می‌شه، نه کل بافر موقعیت
     uniforms.uTime.value = time
     uniforms.uScroll.value = scroll
     uniforms.uSize.value = 0.04 + scroll * 0.03
