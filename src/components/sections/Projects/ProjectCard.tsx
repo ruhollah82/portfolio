@@ -1,39 +1,50 @@
 interface ProjectCardProps {
+  index: number
   title: string
   description: string
   tags: string[]
+  featuredLabel: string
 }
 
-export function ProjectCard({ title, description, tags }: ProjectCardProps) {
+export function ProjectCard({
+  index,
+  title,
+  description,
+  tags,
+  featuredLabel,
+}: ProjectCardProps) {
   return (
-    <article className="group relative overflow-hidden rounded-[1.6rem] border border-border/70 bg-background/65 p-6 shadow-[0_20px_70px_-32px_rgba(0,0,0,0.45)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/50">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,_color-mix(in_oklch,var(--primary)_9%),transparent_45%,_color-mix(in_oklch,var(--accent)_10%),transparent_78%)] opacity-80" />
+    <article className="group border-border/40 hover:border-primary/60 relative flex h-full flex-col border-t pt-6 transition-colors">
+      {/* Top row: Index + Featured label */}
+      <div className="mb-8 flex items-baseline justify-between">
+        <span className="text-muted-foreground/50 font-mono text-xs tracking-widest">
+          0{index}
+        </span>
+        <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.3em] uppercase">
+          {featuredLabel}
+        </span>
+      </div>
 
-      <div className="relative">
-        <div className="mb-5 flex items-center justify-between">
-          <span className="rounded-full border border-border/70 bg-background/75 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
-            Featured build
+      {/* Title */}
+      <h3 className="text-foreground group-hover:text-primary mb-4 text-2xl leading-tight font-light tracking-tight transition-colors md:text-3xl">
+        {title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-muted-foreground mb-8 flex-1 text-sm leading-relaxed">
+        {description}
+      </p>
+
+      {/* Tags with hairline separator */}
+      <div className="border-border/30 flex flex-wrap gap-2 border-t pt-4">
+        {tags.map((tag) => (
+          <span
+            key={tag}
+            className="text-muted-foreground font-mono text-[10px] tracking-[0.22em] uppercase"
+          >
+            {tag}
           </span>
-          <span className="h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_12px_color-mix(in_oklch,var(--accent),transparent_15%)]" />
-        </div>
-
-        <h3 className="text-foreground mb-3 text-xl font-bold transition-colors group-hover:text-primary">
-          {title}
-        </h3>
-        <p className="text-muted-foreground mb-6 max-w-xl leading-relaxed">
-          {description}
-        </p>
-
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-border/70 bg-background/80 px-3 py-1 font-mono text-[10px] tracking-[0.22em] uppercase text-foreground/85"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        ))}
       </div>
     </article>
   )

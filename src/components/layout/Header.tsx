@@ -1,10 +1,8 @@
-// import { useT } from '@/lib/i18n/useT'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useThemeStore } from '@/stores/useThemeStore'
-import { Moon, Sun, Languages } from 'lucide-react'
+import { Icon } from '@/components/ui/Icon'
 
 export function Header() {
-  //   const t = useT()
   const locale = useLocaleStore((s) => s.locale)
   const setLocale = useLocaleStore((s) => s.setLocale)
   const theme = useThemeStore((s) => s.theme)
@@ -18,25 +16,23 @@ export function Header() {
       >
         R.
       </a>
-
       <div className="flex items-center gap-2">
         <button
           onClick={() => setLocale(locale === 'en' ? 'fa' : 'en')}
           className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 transition-colors"
           aria-label="Toggle Language"
         >
-          <Languages className="h-4 w-4" />
+          <Icon name="phosphor:translate" className="h-4 w-4" />
         </button>
         <button
           onClick={toggleTheme}
           className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 transition-colors"
           aria-label="Toggle Theme"
         >
-          {theme === 'light' ? (
-            <Moon className="h-4 w-4" />
-          ) : (
-            <Sun className="h-4 w-4" />
-          )}
+          <Icon
+            name={theme === 'light' ? 'phosphor:moon' : 'phosphor:sun'}
+            className="h-4 w-4"
+          />
         </button>
       </div>
     </header>

@@ -1,85 +1,100 @@
 import { useT } from '@/lib/i18n/useT'
 import { MotionReveal } from '@/components/ui/MotionReveal'
 
-const highlights = [
-  'React / TypeScript',
-  '3D motion and storytelling',
-  'Persian NLP and data-driven UX',
-]
+function Pillar({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="group border-border/30 space-y-2 border-t pt-4">
+      <p className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+        {label}
+      </p>
+      <p className="text-foreground text-lg leading-snug font-light tracking-tight">
+        {value}
+      </p>
+    </div>
+  )
+}
 
 export function About() {
   const t = useT()
 
+  const highlights = [
+    t('about.highlight.react'),
+    t('about.highlight.motion'),
+    t('about.highlight.nlp'),
+  ]
+
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col justify-center px-4 py-24 sm:px-6 lg:px-8"
+      className="relative flex min-h-screen flex-col justify-center px-6 py-32 sm:px-12 lg:px-24"
     >
-      <div className="mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="mx-auto w-full max-w-6xl">
+        {/* Editorial Header */}
         <MotionReveal>
-          <div className="rounded-[2rem] border border-border/70 bg-background/65 p-7 shadow-[0_24px_80px_-30px_rgba(0,0,0,0.45)] backdrop-blur-md sm:p-9">
-            <div className="mb-6 flex items-center gap-3">
-              <span className="text-muted-foreground font-mono text-xs tracking-[0.35em] uppercase">
-                § {t('about.title')}
-              </span>
-            </div>
-
-            <p className="text-foreground max-w-2xl text-lg leading-relaxed md:text-2xl">
-              {t('about.text')}
-            </p>
+          <div className="mb-20 flex items-center gap-4">
+            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+              § 01
+            </span>
+            <div className="bg-border/40 h-px flex-1" />
+            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+              {t('about.title')}
+            </span>
           </div>
         </MotionReveal>
 
-        <MotionReveal delay={0.08}>
-          <div className="space-y-4">
-            <div className="rounded-[2rem] border border-border/70 bg-[linear-gradient(135deg,_color-mix(in_oklch,var(--primary)_10%),transparent_55%,_color-mix(in_oklch,var(--accent)_16%),transparent_80%)] p-[1px]">
-              <div className="rounded-[calc(2rem-1px)] bg-background/75 p-6 backdrop-blur-md">
-                <p className="text-muted-foreground mb-4 font-mono text-[11px] uppercase tracking-[0.32em]">
-                  Signature focus
+        <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:gap-24">
+          {/* Main Statement */}
+          <MotionReveal delay={0.1}>
+            <div className="space-y-8">
+              <h2 className="text-foreground max-w-2xl text-3xl leading-[1.3] font-light tracking-tight sm:text-3xl md:text-4xl">
+                {t('about.text')}
+              </h2>
+
+              {/* Gold accent line */}
+              <div className="bg-brand-gold/60 h-px w-16" />
+            </div>
+          </MotionReveal>
+
+          {/* Side Content */}
+          <MotionReveal delay={0.2}>
+            <div className="space-y-12">
+              {/* Signature Focus - Editorial List */}
+              <div className="space-y-6">
+                <p className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+                  {t('about.signatureFocus')}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {highlights.map((item) => (
-                    <span
+                <ul className="space-y-3">
+                  {highlights.map((item, i) => (
+                    <li
                       key={item}
-                      className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs font-medium text-foreground"
+                      className="border-border/30 flex items-baseline gap-4 border-t pt-3"
                     >
-                      {item}
-                    </span>
+                      <span className="text-muted-foreground/40 font-mono text-[10px]">
+                        0{i + 1}
+                      </span>
+                      <span className="text-foreground text-sm leading-relaxed font-light tracking-wide">
+                        {item}
+                      </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
-            </div>
 
-            <div className="rounded-[2rem] border border-border/70 bg-background/65 p-6 backdrop-blur-md">
-              <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-                <div>
-                  <p className="text-muted-foreground font-mono text-[11px] uppercase tracking-[0.28em]">
-                    Craft
-                  </p>
-                  <p className="mt-2 text-lg font-semibold text-foreground">
-                    Human-centered interfaces
-                  </p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground font-mono text-[11px] uppercase tracking-[0.28em]">
-                    Direction
-                  </p>
-                  <p className="mt-2 text-lg font-semibold text-foreground">
-                    Clear storytelling in motion
-                  </p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground font-mono text-[11px] uppercase tracking-[0.28em]">
-                    Impact
-                  </p>
-                  <p className="mt-2 text-lg font-semibold text-foreground">
-                    Experiences that feel alive
-                  </p>
-                </div>
+              {/* Three Pillars */}
+              <div className="space-y-0">
+                <Pillar label={t('about.craft')} value={t('about.craftDesc')} />
+                <Pillar
+                  label={t('about.direction')}
+                  value={t('about.directionDesc')}
+                />
+                <Pillar
+                  label={t('about.impact')}
+                  value={t('about.impactDesc')}
+                />
               </div>
             </div>
-          </div>
-        </MotionReveal>
+          </MotionReveal>
+        </div>
       </div>
     </section>
   )

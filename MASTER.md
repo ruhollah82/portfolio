@@ -1,5 +1,7 @@
 # MASTER.md
+
 ### Build specification — personal portfolio (single-page, bilingual, 3D)
+
 ### Audience: AI coding agents (Claude Code, Cursor, etc.) and future-you
 
 ---
@@ -27,29 +29,32 @@ A single-page, bilingual (Persian/English) developer portfolio. The centerpiece 
 > Full design-thinking process below. Don't skip to the token table without reading the reasoning — it's what keeps this from looking like every other "glassmorphism + gradient blob" AI portfolio.
 
 ### 2.1 Ground the concept
+
 The subject is a CS student who works daily in **two scripts and two reading directions** (Persian/RTL and English/LTR), and whose real project work spans **Persian NLP** (ParsBERT, sentiment lexicons) and **modern React/3D engineering**. That duality — heritage script meets contemporary tooling — is the one true, specific thing about this brief. It should drive the signature element, not a generic "big number + gradient" hero.
 
-**Avoid by default** (these are the current AI-portfolio clichés — only use if you deliberately choose one, not by default): warm cream + terracotta serif; near-black + single acid-green accent; broadsheet hairline-rule layouts. None of these come from *this* brief.
+**Avoid by default** (these are the current AI-portfolio clichés — only use if you deliberately choose one, not by default): warm cream + terracotta serif; near-black + single acid-green accent; broadsheet hairline-rule layouts. None of these come from _this_ brief.
 
 ### 2.2 Chosen direction — "Manuscript × Terminal"
+
 A palette pulled from Persian manuscript illumination (deep lapis, ink, gold leaf) rendered with the restraint and grid discipline of a code editor. Heritage supplies the color and the signature motion; software engineering supplies the layout logic, spacing rhythm, and mono utility type. Neither side is decorative — both are load-bearing.
 
 **Color tokens** (approximate `oklch`, refine visually in tweakcn — see §8):
 
-| Token | oklch (approx.) | Role |
-|---|---|---|
-| `--ink` | `oklch(0.17 0.03 264)` | Primary dark background |
-| `--paper` | `oklch(0.96 0.008 90)` | Light-mode background / dark-mode card surface |
-| `--lapis` | `oklch(0.47 0.15 259)` | Primary brand color, links, primary buttons |
-| `--gold` | `oklch(0.80 0.12 88)` | Accent — hero particle glow, hover states, focus rings |
-| `--crimson` | `oklch(0.58 0.18 26)` | Rare emphasis only — one CTA, availability badge. Never decoration. |
-| `--slate` | `oklch(0.62 0.02 264)` | Secondary text, borders, muted labels |
+| Token       | oklch (approx.)        | Role                                                                |
+| ----------- | ---------------------- | ------------------------------------------------------------------- |
+| `--ink`     | `oklch(0.17 0.03 264)` | Primary dark background                                             |
+| `--paper`   | `oklch(0.96 0.008 90)` | Light-mode background / dark-mode card surface                      |
+| `--lapis`   | `oklch(0.47 0.15 259)` | Primary brand color, links, primary buttons                         |
+| `--gold`    | `oklch(0.80 0.12 88)`  | Accent — hero particle glow, hover states, focus rings              |
+| `--crimson` | `oklch(0.58 0.18 26)`  | Rare emphasis only — one CTA, availability badge. Never decoration. |
+| `--slate`   | `oklch(0.62 0.02 264)` | Secondary text, borders, muted labels                               |
 
 Do not add more brand colors. Six is the budget.
 
 **Typography** — two roles, both earning their place:
-- **Vazirmatn Variable** for *all* body and heading copy, in both languages. It's one of the few variable fonts with genuinely matched Latin + Persian/Arabic glyph sets, so switching language never causes a jarring font swap mid-layout. Use its weight axis (400 body / 600 subheads / 700 hero) instead of piling on separate font files.
-- **A monospace face** (`JetBrains Mono` or `Space Mono`) for anything that reads as *system output*: section eyebrows, the nav index, tech-stack tags on project cards, the language/theme toggles, timestamps. This is the "terminal" half of the pairing — used sparingly, in caps or small size, never for body copy.
+
+- **Vazirmatn Variable** for _all_ body and heading copy, in both languages. It's one of the few variable fonts with genuinely matched Latin + Persian/Arabic glyph sets, so switching language never causes a jarring font swap mid-layout. Use its weight axis (400 body / 600 subheads / 700 hero) instead of piling on separate font files.
+- **A monospace face** (`JetBrains Mono` or `Space Mono`) for anything that reads as _system output_: section eyebrows, the nav index, tech-stack tags on project cards, the language/theme toggles, timestamps. This is the "terminal" half of the pairing — used sparingly, in caps or small size, never for body copy.
 
 **Layout concept:** single vertical scroll, no card-grid dashboard feel. Generous vertical rhythm (each section gets room to breathe — think editorial spread, not SaaS landing page density). Section labels in mono (`§ ABOUT`, `§ WORK`) act as a quiet table-of-contents down the left/right gutter (flips side with direction), doubling as scroll-position nav dots.
 
@@ -58,7 +63,8 @@ Do not add more brand colors. Six is the budget.
 **Restraint checklist before shipping any screen:** if you added motion, ask whether the hero already earned the "wow" and this is just noise. Cut anything that doesn't serve legibility or the one signature moment.
 
 ### 2.3 Alternate direction (fallback, if the above isn't to taste)
-"Terminal minimal": pure dark editor background (`--ink` only), single `--lapis` accent, mono type for *everything* including body copy, no gold/crimson. Faster to build, lower visual risk, still distinctive because of the particle hero + bilingual morph. Swap by deleting the gold/crimson tokens and changing the body font to the mono face — nothing else in this spec changes.
+
+"Terminal minimal": pure dark editor background (`--ink` only), single `--lapis` accent, mono type for _everything_ including body copy, no gold/crimson. Faster to build, lower visual risk, still distinctive because of the particle hero + bilingual morph. Swap by deleting the gold/crimson tokens and changing the body font to the mono face — nothing else in this spec changes.
 
 ---
 
@@ -77,38 +83,39 @@ Do not add more brand colors. Six is the budget.
 
 ## 4. Tech stack
 
-| Concern | Package | Notes |
-|---|---|---|
-| Build tool | `vite` | React + TS template |
-| UI library | `react`, `react-dom` (v19) | |
-| Language | `typescript` | strict mode |
-| Styling | `tailwindcss` v4, `@tailwindcss/vite` | CSS-first `@theme` config |
-| Components | `shadcn/ui` (CLI-managed, copied into repo — not an npm dependency) | see §4.1 for the network fallback |
-| Theming | tweakcn (web tool, not a package) | exports CSS vars you paste into `globals.css` |
-| State | `zustand` (+ `persist` middleware) | locale, theme, active section only |
-| Animation | `motion` (import from `motion/react`) | **not** `framer-motion` — the project renamed and moved to this package; `framer-motion` still works but is unmaintained |
-| Smooth scroll | `lenis` (use the `lenis/react` subpath — `ReactLenis` component) | superseded `@studio-freight/lenis` / `react-lenis`, don't install those |
-| 3D | `three`, `@react-three/fiber`, `@react-three/drei` | import only the specific `drei` helpers you use — its barrel export is large |
-| Icons | `lucide-react` | import icons from their individual paths, not the barrel, to keep tree-shaking clean |
-| Fonts | `@fontsource-variable/vazirmatn`, self-host the mono face or use `@fontsource/jetbrains-mono` | avoid Google Fonts CDN render-blocking request; self-host and `font-display: swap` |
-| i18n | hand-rolled `en.json`/`fa.json` + a tiny `t()` hook backed by the locale store | a single static page doesn't need `react-i18next`'s weight; revisit only if content grows (blog, CMS) |
-| Lint/format | `eslint`, `prettier` (with `prettier-plugin-tailwindcss` for class sorting) | |
-| Bundle inspection | `rollup-plugin-visualizer` | run before declaring perf phase done |
+| Concern           | Package                                                                                       | Notes                                                                                                                    |
+| ----------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Build tool        | `vite`                                                                                        | React + TS template                                                                                                      |
+| UI library        | `react`, `react-dom` (v19)                                                                    |                                                                                                                          |
+| Language          | `typescript`                                                                                  | strict mode                                                                                                              |
+| Styling           | `tailwindcss` v4, `@tailwindcss/vite`                                                         | CSS-first `@theme` config                                                                                                |
+| Components        | `shadcn/ui` (CLI-managed, copied into repo — not an npm dependency)                           | see §4.1 for the network fallback                                                                                        |
+| Theming           | tweakcn (web tool, not a package)                                                             | exports CSS vars you paste into `globals.css`                                                                            |
+| State             | `zustand` (+ `persist` middleware)                                                            | locale, theme, active section only                                                                                       |
+| Animation         | `motion` (import from `motion/react`)                                                         | **not** `framer-motion` — the project renamed and moved to this package; `framer-motion` still works but is unmaintained |
+| Smooth scroll     | `lenis` (use the `lenis/react` subpath — `ReactLenis` component)                              | superseded `@studio-freight/lenis` / `react-lenis`, don't install those                                                  |
+| 3D                | `three`, `@react-three/fiber`, `@react-three/drei`                                            | import only the specific `drei` helpers you use — its barrel export is large                                             |
+| Icons             | `iconify`                                                                                     | import icons from their individual paths                                                                                 |
+| Fonts             | `@fontsource-variable/vazirmatn`, self-host the mono face or use `@fontsource/jetbrains-mono` | avoid Google Fonts CDN render-blocking request; self-host and `font-display: swap`                                       |
+| i18n              | hand-rolled `en.json`/`fa.json` + a tiny `t()` hook backed by the locale store                | a single static page doesn't need `react-i18next`'s weight; revisit only if content grows (blog, CMS)                    |
+| Lint/format       | `eslint`, `prettier` (with `prettier-plugin-tailwindcss` for class sorting)                   |                                                                                                                          |
+| Bundle inspection | `rollup-plugin-visualizer`                                                                    | run before declaring perf phase done                                                                                     |
 
 ### 4.1 shadcn CLI network fallback
+
 The shadcn CLI has previously timed out in restricted-network environments. If `npx shadcn add <component>` hangs or fails, fall back to copying the component source directly from the shadcn GitHub repo into `src/components/ui/` and wiring dependencies (`class-variance-authority`, `@radix-ui/*`) manually. Don't burn more than one retry on the CLI before switching to the manual path.
 
 ---
 
 ## 5. Information architecture (single page, in scroll order)
 
-| # | Section | Job |
-|---|---|---|
-| 1 | **Hero** | Particle name (3D), one-line role/title, scroll-down affordance, language + theme toggles |
-| 2 | **About** | Short bio, what you build, current focus (CS study + frontend + Persian NLP) |
-| 3 | **Skills** | Grouped stack (Frontend / 3D & Motion / Backend & Tooling / ML & NLP), mono-tag chips, no decorative progress bars (they encode false precision) |
-| 4 | **Projects** | 3–5 real project cards (see §18 for real content to seed this) |
-| 5 | **Contact** | Direct contact methods, resume download, copy-to-clipboard email |
+| #   | Section      | Job                                                                                                                                              |
+| --- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | **Hero**     | Particle name (3D), one-line role/title, scroll-down affordance, language + theme toggles                                                        |
+| 2   | **About**    | Short bio, what you build, current focus (CS study + frontend + Persian NLP)                                                                     |
+| 3   | **Skills**   | Grouped stack (Frontend / 3D & Motion / Backend & Tooling / ML & NLP), mono-tag chips, no decorative progress bars (they encode false precision) |
+| 4   | **Projects** | 3–5 real project cards (see §18 for real content to seed this)                                                                                   |
+| 5   | **Contact**  | Direct contact methods, resume download, copy-to-clipboard email                                                                                 |
 
 Keep it to these five. Resist adding a "Testimonials" or "Blog" section unless there's real content for it — empty sections read as templated.
 
@@ -117,9 +124,11 @@ Keep it to these five. Resist adding a "Testimonials" or "Blog" section unless t
 ## 6. The signature element — particle name hero
 
 ### 6.1 Concept
-A `<canvas>`-backed 3D scene where thousands of points assemble into the owner's name, rendered in Vazirmatn. On language toggle, the point cloud **morphs** from the Persian rendering to the Latin rendering (or back) instead of cross-fading — this is the one moment the bilingual identity becomes something you *see* rather than just a `dir="rtl"` attribute flip.
+
+A `<canvas>`-backed 3D scene where thousands of points assemble into the owner's name, rendered in Vazirmatn. On language toggle, the point cloud **morphs** from the Persian rendering to the Latin rendering (or back) instead of cross-fading — this is the one moment the bilingual identity becomes something you _see_ rather than just a `dir="rtl"` attribute flip.
 
 ### 6.2 Technique (no font-to-geometry conversion needed)
+
 1. Render the name to an **offscreen 2D canvas** using `ctx.font` set to the Vazirmatn variable font (both the Persian and Latin strings, each to its own offscreen canvas).
 2. Read pixel data with `getImageData`; sample coordinates where alpha exceeds a threshold.
 3. Convert sampled pixel coordinates into a `Float32Array` of 3D positions (with mild random z-jitter for depth), capped at **3,000–6,000 points** depending on device tier (see §6.4).
@@ -127,11 +136,13 @@ A `<canvas>`-backed 3D scene where thousands of points assemble into the owner's
 5. On language toggle, animate a single `uProgress` uniform (or lerp a shared `BufferAttribute`) from 0→1 over ~900ms with an eased curve — this drives the interpolation between the two position arrays entirely on the GPU, no per-point React state.
 
 ### 6.3 Scroll & idle behavior
+
 - At rest: gentle ambient drift (slow rotation, subtle noise-based point jitter) — enough to read as "alive," not enough to distract from legibility.
 - On scroll past the hero: fade/scale the point cloud out via a **motion value driven by Lenis progress** (see §7), not a React state re-render.
 - Pointer parallax: camera offsets slightly toward pointer position, damped — small, not a full drag-to-rotate gimmick.
 
 ### 6.4 Performance & fallback
+
 - Clamp `dpr` in the `<Canvas>`: `dpr={[1, Math.min(devicePixelRatio, 2)]}`.
 - Use `frameloop="demand"` and call `invalidate()` only on scroll/pointer/morph events — don't render 3D at 60fps when nothing is changing.
 - Detect low-end devices cheaply: `navigator.hardwareConcurrency <= 4` or a failed/low-tier WebGL context → drop to ~1,500 points, disable pointer parallax.
@@ -187,20 +198,20 @@ Keep the stores small and purpose-built. Use **fine-grained selectors** everywhe
 ```ts
 // stores/useLocaleStore.ts
 interface LocaleState {
-  locale: 'fa' | 'en';
-  setLocale: (l: 'fa' | 'en') => void;
+  locale: 'fa' | 'en'
+  setLocale: (l: 'fa' | 'en') => void
 }
 
 // stores/useThemeStore.ts
 interface ThemeState {
-  theme: 'light' | 'dark';
-  toggleTheme: () => void;
+  theme: 'light' | 'dark'
+  toggleTheme: () => void
 }
 
 // stores/useUIStore.ts
 interface UIState {
-  activeSection: 'hero' | 'about' | 'skills' | 'projects' | 'contact';
-  setActiveSection: (s: UIState['activeSection']) => void;
+  activeSection: 'hero' | 'about' | 'skills' | 'projects' | 'contact'
+  setActiveSection: (s: UIState['activeSection']) => void
   // NOTE: no continuous scroll progress here — see §12
 }
 ```
@@ -219,7 +230,7 @@ Both `locale` and `theme` stores use Zustand's `persist` middleware to localStor
 - `useMemo` for derived arrays/objects recomputed on render (sampled particle positions, sorted/filtered project lists).
 - `useCallback` for handlers passed into memoized children (nav links, toggles).
 - Code-split the 3D scene: `React.lazy(() => import('./three/Scene'))` behind `<Suspense>` with a lightweight gradient/skeleton fallback, so first paint of text content doesn't wait on Three.js's bundle weight.
-- Import `drei` helpers individually; import `lucide-react` icons from their specific paths, not the full barrel.
+- Import `drei` helpers individually; import `iconify` icons from their specific paths.
 - Fonts: self-host Vazirmatn Variable (`@fontsource-variable/vazirmatn`), `font-display: swap`, subset if the final glyph range allows it. Preload the variable font file in `index.html`.
 - Images (project screenshots): WebP/AVIF, explicit `width`/`height` to avoid layout shift, `loading="lazy"` below the fold.
 - Run `rollup-plugin-visualizer` before considering the performance phase (§16, Phase 6) done — check for accidental full-library imports.
@@ -306,35 +317,35 @@ Work through these in order. Don't start a phase until the previous one's exit c
 
 **Phase 0 — Scaffold**
 Vite + React + TS project, Tailwind v4 wired, ESLint/Prettier configured, shadcn initialized with a placeholder theme.
-*Exit:* blank page renders, lint/typecheck pass.
+_Exit:_ blank page renders, lint/typecheck pass.
 
 **Phase 1 — Theming & i18n skeleton**
 tweakcn theme pasted in, dark/light toggle working, locale store + `en.json`/`fa.json` + `dir`/`lang` switching working on an empty page.
-*Exit:* toggling locale flips direction and swaps a test string; toggling theme flips CSS vars.
+_Exit:_ toggling locale flips direction and swaps a test string; toggling theme flips CSS vars.
 
 **Phase 2 — Static layout, all five sections**
 Build every section with real (or seeded, see §18) content and no motion at all — plain, correct, responsive, RTL-correct HTML/CSS first.
-*Exit:* the whole page reads correctly top to bottom in both locales at mobile/tablet/desktop widths, no horizontal scroll, logical-property audit passes (no leftover `-left`/`-right`).
+_Exit:_ the whole page reads correctly top to bottom in both locales at mobile/tablet/desktop widths, no horizontal scroll, logical-property audit passes (no leftover `-left`/`-right`).
 
 **Phase 3 — Smooth scroll**
 Wire `ReactLenis`, confirm native scroll still works as fallback, add section-nav highlighting via `useActiveSection`.
-*Exit:* scroll feels smooth, nav dots track the visible section, keyboard/trackpad/wheel/touch all behave.
+_Exit:_ scroll feels smooth, nav dots track the visible section, keyboard/trackpad/wheel/touch all behave.
 
 **Phase 4 — The 3D hero**
 Build `sampleTextPoints`, the shader material, the language-morph transition, idle drift, pointer parallax, low-end/reduced-motion fallbacks.
-*Exit:* hero looks right in both scripts, morphs on locale toggle, degrades gracefully with reduced motion and on a throttled CPU (test via DevTools CPU throttling).
+_Exit:_ hero looks right in both scripts, morphs on locale toggle, degrades gracefully with reduced motion and on a throttled CPU (test via DevTools CPU throttling).
 
 **Phase 5 — Scroll-linked motion polish**
 Section reveals via `motion`'s `useScroll`/`useTransform`, hero exit-fade tied to scroll, micro-interactions on cards/buttons.
-*Exit:* nothing animates that doesn't serve legibility or the signature moment (re-run the §2.3 restraint checklist).
+_Exit:_ nothing animates that doesn't serve legibility or the signature moment (re-run the §2.3 restraint checklist).
 
 **Phase 6 — Performance pass**
 Bundle analysis, code-splitting check, font loading audit, image formats, Lighthouse run.
-*Exit:* budgets in §11 met.
+_Exit:_ budgets in §11 met.
 
 **Phase 7 — Accessibility & SEO pass**
 Full keyboard walkthrough, screen-reader spot check, contrast check, meta/OG/JSON-LD in place.
-*Exit:* §12 and §13 checklists pass.
+_Exit:_ §12 and §13 checklists pass.
 
 **Phase 8 — Deploy**
 Static host of choice (Vercel/Netlify/Cloudflare Pages/GitHub Pages all work for a Vite SPA). Set up preview deploys per branch if collaborating.
@@ -360,16 +371,18 @@ Static host of choice (Vercel/Netlify/Cloudflare Pages/GitHub Pages all work for
 Fill in real details here before/during Phase 2. Suggested project entries below are drawn from actual project work — verify current links/descriptions before publishing, trim or reorder freely.
 
 **Identity**
+
 - Name (Latin + Persian spelling): `[Your Name]` / `[نام شما]`
 - Role/title line: e.g. "Frontend Developer · CS Student · Persian NLP"
 - Short bio (2–3 sentences, both locales)
 - Contact: `[email]`, `[GitHub]`, `[LinkedIn]`, optionally `[Telegram]` (common contact channel for Persian-speaking devs), resume PDF
 
 **Suggested project cards** (adjust freely):
-1. **Voteria** — Reddit-inspired community discussion platform. React 19, Vite, Tailwind v4, Zustand, shadcn/ui, Go backend. *Talking point: real-time-ish state management with Zustand, collaborative Git workflow.*
-2. **Persian Sentiment Lexicon Builder** — ParsBERT/MLM-based sentiment lexicon generation from Digikala product reviews, with POS-aware template selection and percentile-based thresholds. *Talking point: applied NLP + the debugging depth (negation handling, tokenization fixes, caching strategy).*
-3. **Hooshtan Fit (Body Regions)** — Android app via Capacitor + MediaPipe pose detection. *Talking point: cross-platform mobile, camera/permission handling, native-bridge debugging.*
-4. **ICPC contest site (bcpc-frontend)** — Astro 7 + React islands, Tailwind v4, shadcn/ui. *Talking point: Islands architecture, evaluating framework tradeoffs.*
+
+1. **Voteria** — Reddit-inspired community discussion platform. React 19, Vite, Tailwind v4, Zustand, shadcn/ui, Go backend. _Talking point: real-time-ish state management with Zustand, collaborative Git workflow._
+2. **Persian Sentiment Lexicon Builder** — ParsBERT/MLM-based sentiment lexicon generation from Digikala product reviews, with POS-aware template selection and percentile-based thresholds. _Talking point: applied NLP + the debugging depth (negation handling, tokenization fixes, caching strategy)._
+3. **Hooshtan Fit (Body Regions)** — Android app via Capacitor + MediaPipe pose detection. _Talking point: cross-platform mobile, camera/permission handling, native-bridge debugging._
+4. **ICPC contest site (bcpc-frontend)** — Astro 7 + React islands, Tailwind v4, shadcn/ui. _Talking point: Islands architecture, evaluating framework tradeoffs._
 
 Pick 3–4 of these rather than all — a portfolio with four strong entries reads better than one with six padded ones.
 

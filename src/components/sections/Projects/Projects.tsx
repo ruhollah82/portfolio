@@ -6,7 +6,7 @@ const projects = [
   {
     titleKey: 'projects.voteria.title',
     descKey: 'projects.voteria.desc',
-    tags: ['React 19', 'Zustand', 'Go'],
+    tags: ['React', 'TypeScript', 'Zustand'],
   },
   {
     titleKey: 'projects.lexicon.title',
@@ -31,29 +31,39 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative flex min-h-screen flex-col justify-center px-4 py-24 sm:px-6 lg:px-8"
+      className="relative flex min-h-screen flex-col justify-center px-6 py-32 sm:px-12 lg:px-24"
     >
       <div className="mx-auto w-full max-w-6xl">
+        {/* Editorial Header */}
         <MotionReveal>
-          <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="text-muted-foreground font-mono text-xs tracking-[0.4em] uppercase">
-                § {t('projects.title')}
-              </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
-                A selection of products and experiments that sit at the intersection of interface craft, tooling, and real-world problem solving.
-              </p>
-            </div>
+          <div className="mb-16 flex items-center gap-4">
+            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+              § 04
+            </span>
+            <div className="bg-border/40 h-px flex-1" />
+            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+              {t('projects.title')}
+            </span>
           </div>
         </MotionReveal>
 
-        <div className="grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2">
+        {/* Subtitle */}
+        <MotionReveal delay={0.05}>
+          <p className="text-muted-foreground mb-16 max-w-2xl text-base leading-relaxed md:text-lg">
+            {t('projects.subtitle')}
+          </p>
+        </MotionReveal>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
-            <MotionReveal key={p.titleKey} delay={i * 0.08}>
+            <MotionReveal key={p.titleKey} delay={0.1 + i * 0.06}>
               <ProjectCard
+                index={i + 1}
                 title={t(p.titleKey)}
                 description={t(p.descKey)}
                 tags={p.tags}
+                featuredLabel={t('projects.featured')}
               />
             </MotionReveal>
           ))}
