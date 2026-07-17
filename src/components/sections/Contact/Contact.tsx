@@ -71,7 +71,7 @@ export function Contact() {
 
           <MotionReveal delay={0.2} className="w-full lg:w-80">
             <a
-              href="/resume.pdf"
+              href="https://raw.githubusercontent.com/ruhollah82/ruhollah82/main/main.pdf"
               download
               className="group border-border/40 hover:text-primary flex items-center justify-between border-t py-6 transition-colors duration-300"
             >
