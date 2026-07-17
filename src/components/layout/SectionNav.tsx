@@ -18,7 +18,7 @@ export function SectionNav() {
           <a
             key={section}
             href={`#${section}`}
-            className="group flex items-center gap-3 font-mono text-xs tracking-widest uppercase"
+            className="group flex items-center gap-3 text-xs tracking-widest uppercase"
           >
             <span
               className={`block h-2 w-2 rounded-full border transition-all ${

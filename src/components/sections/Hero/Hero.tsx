@@ -101,7 +101,7 @@ export function Hero() {
       </div>
 
       <div className="text-muted-foreground absolute bottom-12 z-10 flex animate-bounce flex-col items-center gap-2">
-        <span className="font-mono text-[11px] tracking-[0.35em] uppercase">
+        <span className="text-[11px] tracking-[0.35em] uppercase">
           {t('hero.scroll')}
         </span>
         <Icon name="phosphor:caret-double-down" className="h-4 w-4" />

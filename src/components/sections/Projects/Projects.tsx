@@ -37,11 +37,11 @@ export function Projects() {
         {/* Editorial Header */}
         <MotionReveal>
           <div className="mb-16 flex items-center gap-4">
-            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               § 04
             </span>
             <div className="bg-border/40 h-px flex-1" />
-            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               {t('projects.title')}
             </span>
           </div>

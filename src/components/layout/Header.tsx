@@ -12,7 +12,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between p-6 md:p-8">
       <a
         href="#hero"
-        className="text-foreground hover:text-primary font-mono text-sm font-bold tracking-wider transition-colors"
+        className="text-foreground hover:text-primary  text-sm font-bold tracking-wider transition-colors"
       >
         R.
       </a>

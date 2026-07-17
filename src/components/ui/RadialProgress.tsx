@@ -49,7 +49,7 @@ export function RadialProgress({
           className="transition-all duration-700 ease-out"
         />
       </svg>
-      <span className="text-foreground absolute font-mono text-[10px] font-bold">
+      <span className="text-foreground absolute text-[10px] font-bold">
         {value}
       </span>
     </div>

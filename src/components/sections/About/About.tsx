@@ -4,7 +4,7 @@ import { MotionReveal } from '@/components/ui/MotionReveal'
 function Pillar({ label, value }: { label: string; value: string }) {
   return (
     <div className="group border-border/30 space-y-2 border-t pt-4">
-      <p className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+      <p className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
         {label}
       </p>
       <p className="text-foreground text-lg leading-snug font-light tracking-tight">
@@ -32,11 +32,11 @@ export function About() {
         {/* Editorial Header */}
         <MotionReveal>
           <div className="mb-20 flex items-center gap-4">
-            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               § 01
             </span>
             <div className="bg-border/40 h-px flex-1" />
-            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               {t('about.title')}
             </span>
           </div>
@@ -60,7 +60,7 @@ export function About() {
             <div className="space-y-12">
               {/* Signature Focus - Editorial List */}
               <div className="space-y-6">
-                <p className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+                <p className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
                   {t('about.signatureFocus')}
                 </p>
                 <ul className="space-y-3">
@@ -69,7 +69,7 @@ export function About() {
                       key={item}
                       className="border-border/30 flex items-baseline gap-4 border-t pt-3"
                     >
-                      <span className="text-muted-foreground/40 font-mono text-[10px]">
+                      <span className="text-muted-foreground/40 text-[10px]">
                         0{i + 1}
                       </span>
                       <span className="text-foreground text-sm leading-relaxed font-light tracking-wide">

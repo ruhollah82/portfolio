@@ -38,7 +38,7 @@ export function Contact() {
         {/* Editorial Header */}
         <MotionReveal>
           <div className="mb-16 flex items-center gap-4">
-            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               § 05 {t('contact.title')}
             </span>
             <div className="bg-border/40 h-px flex-1" />
@@ -49,7 +49,7 @@ export function Contact() {
         <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:justify-between lg:gap-24">
           {/* Left: Primary CTA (Typography-focused) */}
           <MotionReveal delay={0.1} className="flex-1">
-            <p className="text-muted-foreground/80 mb-4 font-mono text-xs tracking-[0.3em] uppercase">
+            <p className="text-muted-foreground/80 mb-4 text-xs tracking-[0.3em] uppercase">
               {t('contact.email')}
             </p>
 

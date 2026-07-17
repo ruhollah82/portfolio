@@ -17,10 +17,10 @@ export function ProjectCard({
     <article className="group border-border/40 hover:border-primary/60 relative flex h-full flex-col border-t pt-6 transition-colors">
       {/* Top row: Index + Featured label */}
       <div className="mb-8 flex items-baseline justify-between">
-        <span className="text-muted-foreground/50 font-mono text-xs tracking-widest">
+        <span className="text-muted-foreground/50 text-xs tracking-widest">
           0{index}
         </span>
-        <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.3em] uppercase">
+        <span className="text-muted-foreground/60 text-[10px] tracking-[0.3em] uppercase">
           {featuredLabel}
         </span>
       </div>
@@ -40,7 +40,7 @@ export function ProjectCard({
         {tags.map((tag) => (
           <span
             key={tag}
-            className="text-muted-foreground font-mono text-[10px] tracking-[0.22em] uppercase"
+            className="text-muted-foreground text-[10px] tracking-[0.22em] uppercase"
           >
             {tag}
           </span>

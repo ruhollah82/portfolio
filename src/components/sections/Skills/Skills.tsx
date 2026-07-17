@@ -73,10 +73,10 @@ function SkillColumn({
     <div className="space-y-5">
       {/* Header */}
       <div className="border-border/40 flex items-baseline gap-3 border-b pb-4">
-        <span className="text-muted-foreground/50 font-mono text-[10px] tracking-widest">
+        <span className="text-muted-foreground/50 text-[10px] tracking-widest">
           0{index + 1}
         </span>
-        <h3 className="text-foreground font-mono text-sm font-medium tracking-[0.2em] uppercase">
+        <h3 className="text-foreground text-sm font-medium tracking-[0.2em] uppercase">
           {t(`skills.${group.key}`)}
         </h3>
       </div>
@@ -92,7 +92,7 @@ function SkillColumn({
               {skill.name}
             </span>
             {/* تغییر ۲: ارسال تابع t به getLevelLabel */}
-            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-widest uppercase">
+            <span className="text-muted-foreground/60 text-[10px] tracking-widest uppercase">
               {getLevelLabel(skill.level, t)}
             </span>
           </li>
@@ -114,11 +114,11 @@ export function Skills() {
         {/* Editorial Header */}
         <MotionReveal>
           <div className="mb-20 flex items-center gap-4">
-            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               § 02
             </span>
             <div className="bg-border/40 h-px flex-1" />
-            <span className="text-muted-foreground/60 font-mono text-[10px] tracking-[0.4em] uppercase">
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               {t('skills.title')}
             </span>
           </div>
