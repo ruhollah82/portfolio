@@ -20,10 +20,12 @@ export function Header() {
       <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-transparent p-5 sm:p-6 md:p-8">
         <a
           href="#hero"
+          onClick={() => setIsMenuOpen(false)} // بستن منو با کلیک روی لوگو
           className="text-foreground hover:text-primary text-sm font-bold tracking-wider transition-colors"
         >
           R.
         </a>
+
         <div className="flex items-center gap-2">
           <button
             onClick={() => setLocale(locale === 'en' ? 'fa' : 'en')}
@@ -32,6 +34,7 @@ export function Header() {
           >
             <Icon name="phosphor:translate" className="h-4 w-4" />
           </button>
+
           <button
             onClick={toggleTheme}
             className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 backdrop-blur-xl transition-colors"
@@ -42,13 +45,25 @@ export function Header() {
               className="h-4 w-4"
             />
           </button>
-          <button
-            onClick={() => setIsMenuOpen(true)}
-            className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 backdrop-blur-xl transition-colors md:hidden"
-            aria-label="Open Menu"
-          >
-            <Icon name="phosphor:list" className="h-5 w-5" />
-          </button>
+
+          {/* تغییر آیکون همبرگری به دکمه بستن بر اساس وضعیت منو */}
+          {isMenuOpen ? (
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 backdrop-blur-xl transition-colors md:hidden"
+              aria-label="Close Menu"
+            >
+              <Icon name="phosphor:x" className="h-5 w-5" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setIsMenuOpen(true)}
+              className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 backdrop-blur-xl transition-colors md:hidden"
+              aria-label="Open Menu"
+            >
+              <Icon name="phosphor:list" className="h-5 w-5" />
+            </button>
+          )}
         </div>
       </header>
 
@@ -61,13 +76,7 @@ export function Header() {
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className="bg-background/95 fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 backdrop-blur-xl md:hidden"
           >
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              className="border-border hover:bg-accent hover:text-accent-foreground absolute top-5 right-5 rounded-md border p-2 transition-colors"
-              aria-label="Close Menu"
-            >
-              <Icon name="phosphor:x" className="h-5 w-5" />
-            </button>
+            {/* دکمه بستن از اینجا حذف شد */}
             {navItems.map((item) => (
               <a
                 key={item}
