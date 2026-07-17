@@ -39,9 +39,12 @@ export function Contact() {
         <MotionReveal>
           <div className="mb-16 flex items-center gap-4">
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
-              § 05 {t('contact.title')}
+              § 03
             </span>
             <div className="bg-border/40 h-px flex-1" />
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
+              {t('contact.title')}
+            </span>
           </div>
         </MotionReveal>
 

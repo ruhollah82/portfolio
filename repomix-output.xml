@@ -234,53 +234,6 @@ This section contains the contents of the repository's files.
 <svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
 </file>
 
-<file path="src/components/layout/SectionNav.tsx">
-import { useT } from '@/lib/i18n/useT'
-import { useUIStore } from '@/stores/useUIStore'
-
-const sections = ['about', 'skills', 'projects', 'contact'] as const
-
-export function SectionNav() {
-  const t = useT()
-  const activeSection = useUIStore((s) => s.activeSection)
-
-  return (
-    <nav
-      className="fixed start-8 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-6 md:flex"
-      aria-label="Section navigation"
-    >
-      {sections.map((section) => {
-        const isActive = activeSection === section
-        return (
-          <a
-            key={section}
-            href={`#${section}`}
-            className="group flex items-center gap-3 text-xs tracking-widest uppercase"
-          >
-            <span
-              className={`block h-2 w-2 rounded-full border transition-all ${
-                isActive
-                  ? 'bg-primary border-primary scale-125'
-                  : 'border-muted-foreground group-hover:border-primary bg-transparent'
-              }`}
-            />
-            <span
-              className={`transition-colors ${
-                isActive
-                  ? 'text-primary'
-                  : 'text-muted-foreground group-hover:text-foreground'
-              }`}
-            >
-              {t(`nav.${section}`)}
-            </span>
-          </a>
-        )
-      })}
-    </nav>
-  )
-}
-</file>
-
 <file path="src/components/three/ParticleField.tsx">
 import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
@@ -513,66 +466,6 @@ function normalizeIconName(name: string) {
 
 export function Icon({ name, className = 'h-4 w-4' }: IconProps) {
   return <IconifyIcon icon={normalizeIconName(name)} className={className} />
-}
-</file>
-
-<file path="src/components/ui/RadialProgress.tsx">
-import { cn } from '@/lib/utils'
-
-interface RadialProgressProps {
-  value: number
-  size?: number
-  strokeWidth?: number
-  className?: string
-  color?: string
-}
-
-export function RadialProgress({
-  value,
-  size = 48,
-  strokeWidth = 4,
-  className,
-  color = 'hsl(var(--primary))',
-}: RadialProgressProps) {
-  const radius = (size - strokeWidth) / 2
-  const circumference = radius * 2 * Math.PI
-  const offset = circumference - (value / 100) * circumference
-
-  return (
-    <div
-      className={cn(
-        'relative inline-flex items-center justify-center',
-        className
-      )}
-    >
-      <svg width={size} height={size} className="-rotate-90">
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={strokeWidth}
-          className="text-border/50"
-        />
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          fill="none"
-          stroke={color}
-          strokeWidth={strokeWidth}
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          strokeLinecap="round"
-          className="transition-all duration-700 ease-out"
-        />
-      </svg>
-      <span className="text-foreground absolute text-[10px] font-bold">
-        {value}
-      </span>
-    </div>
-  )
 }
 </file>
 
@@ -1024,55 +917,49 @@ export default defineConfig([
 }
 </file>
 
-<file path="src/components/layout/Footer.tsx">
-export function Footer() {
-  return (
-    <footer className="text-muted-foreground border-border border-t py-12 text-center text-xs">
-      <p>© {new Date().getFullYear()} Ruhollah Naseri.</p>
-    </footer>
-  )
-}
-</file>
+<file path="src/components/layout/SectionNav.tsx">
+import { useT } from '@/lib/i18n/useT'
+import { useUIStore } from '@/stores/useUIStore'
 
-<file path="src/components/layout/Header.tsx">
-import { useLocaleStore } from '@/stores/useLocaleStore'
-import { useThemeStore } from '@/stores/useThemeStore'
-import { Icon } from '@/components/ui/Icon'
+const sections = ['about', 'skills', 'projects', 'contact'] as const
 
-export function Header() {
-  const locale = useLocaleStore((s) => s.locale)
-  const setLocale = useLocaleStore((s) => s.setLocale)
-  const theme = useThemeStore((s) => s.theme)
-  const toggleTheme = useThemeStore((s) => s.toggleTheme)
+export function SectionNav() {
+  const t = useT()
+  const activeSection = useUIStore((s) => s.activeSection)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between p-6 md:p-8">
-      <a
-        href="#hero"
-        className="text-foreground hover:text-primary  text-sm font-bold tracking-wider transition-colors"
-      >
-        R.
-      </a>
-      <div className="flex items-center gap-2">
-        <button
-          onClick={() => setLocale(locale === 'en' ? 'fa' : 'en')}
-          className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 transition-colors"
-          aria-label="Toggle Language"
-        >
-          <Icon name="phosphor:translate" className="h-4 w-4" />
-        </button>
-        <button
-          onClick={toggleTheme}
-          className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 transition-colors"
-          aria-label="Toggle Theme"
-        >
-          <Icon
-            name={theme === 'light' ? 'phosphor:moon' : 'phosphor:sun'}
-            className="h-4 w-4"
-          />
-        </button>
-      </div>
-    </header>
+    <nav
+      className="fixed start-8 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-6 md:flex"
+      aria-label="Section navigation"
+    >
+      {sections.map((section) => {
+        const isActive = activeSection === section
+        return (
+          <a
+            key={section}
+            href={`#${section}`}
+            className="group flex items-center gap-3 text-xs tracking-widest uppercase"
+          >
+            <span
+              className={`block h-2 w-2 rounded-full border transition-all ${
+                isActive
+                  ? 'bg-primary border-primary scale-125'
+                  : 'border-muted-foreground group-hover:border-primary bg-transparent'
+              }`}
+            />
+            <span
+              className={`transition-colors ${
+                isActive
+                  ? 'text-primary'
+                  : 'text-muted-foreground group-hover:text-foreground'
+              }`}
+            >
+              {t(`nav.${section}`)}
+            </span>
+          </a>
+        )
+      })}
+    </nav>
   )
 }
 </file>
@@ -1152,6 +1039,66 @@ export function MotionReveal({
     >
       {children}
     </motion.div>
+  )
+}
+</file>
+
+<file path="src/components/ui/RadialProgress.tsx">
+import { cn } from '@/lib/utils'
+
+interface RadialProgressProps {
+  value: number
+  size?: number
+  strokeWidth?: number
+  className?: string
+  color?: string
+}
+
+export function RadialProgress({
+  value,
+  size = 48,
+  strokeWidth = 4,
+  className,
+  color = 'hsl(var(--primary))',
+}: RadialProgressProps) {
+  const radius = (size - strokeWidth) / 2
+  const circumference = radius * 2 * Math.PI
+  const offset = circumference - (value / 100) * circumference
+
+  return (
+    <div
+      className={cn(
+        'relative inline-flex items-center justify-center',
+        className
+      )}
+    >
+      <svg width={size} height={size} className="-rotate-90">
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={strokeWidth}
+          className="text-border/50"
+        />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke={color}
+          strokeWidth={strokeWidth}
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          strokeLinecap="round"
+          className="transition-all duration-700 ease-out"
+        />
+      </svg>
+      <span className="text-foreground absolute text-[10px] font-bold">
+        {value}
+      </span>
+    </div>
   )
 }
 </file>
@@ -6340,6 +6287,166 @@ export function Providers({ children }: { children: React.ReactNode }) {
 }
 </file>
 
+<file path="src/components/layout/Footer.tsx">
+export function Footer() {
+  return (
+    <footer className="text-muted-foreground border-border border-t py-12 text-center text-xs">
+      <p>© {new Date().getFullYear()} Ruhollah Naseri.</p>
+    </footer>
+  )
+}
+</file>
+
+<file path="src/components/layout/Header.tsx">
+import { useLocaleStore } from '@/stores/useLocaleStore'
+import { useThemeStore } from '@/stores/useThemeStore'
+import { Icon } from '@/components/ui/Icon'
+
+export function Header() {
+  const locale = useLocaleStore((s) => s.locale)
+  const setLocale = useLocaleStore((s) => s.setLocale)
+  const theme = useThemeStore((s) => s.theme)
+  const toggleTheme = useThemeStore((s) => s.toggleTheme)
+
+  return (
+    <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between p-6 md:p-8">
+      <a
+        href="#hero"
+        className="text-foreground hover:text-primary  text-sm font-bold tracking-wider transition-colors"
+      >
+        R.
+      </a>
+      <div className="flex items-center gap-2">
+        <button
+          onClick={() => setLocale(locale === 'en' ? 'fa' : 'en')}
+          className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 transition-colors"
+          aria-label="Toggle Language"
+        >
+          <Icon name="phosphor:translate" className="h-4 w-4" />
+        </button>
+        <button
+          onClick={toggleTheme}
+          className="border-border hover:bg-accent hover:text-accent-foreground rounded-md border p-2 transition-colors"
+          aria-label="Toggle Theme"
+        >
+          <Icon
+            name={theme === 'light' ? 'phosphor:moon' : 'phosphor:sun'}
+            className="h-4 w-4"
+          />
+        </button>
+      </div>
+    </header>
+  )
+}
+</file>
+
+<file path="src/styles/globals.css">
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Base Palette (Light Mode) */
+  --ink: oklch(0.17 0.03 264);
+  --paper: oklch(0.96 0.008 90);
+  --lapis: oklch(0.47 0.15 259);
+  --gold: oklch(0.8 0.12 88);
+  --crimson: oklch(0.58 0.18 26);
+  --slate: oklch(0.62 0.02 264);
+
+  /* shadcn/ui mapping (Light) */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--lapis);
+  --primary-foreground: var(--paper);
+  --secondary: oklch(0.92 0.01 90);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.92 0.01 90);
+  --muted-foreground: var(--slate);
+  --accent: var(--gold);
+  --accent-foreground: var(--ink);
+  --destructive: var(--crimson);
+  --destructive-foreground: var(--paper);
+  --border: oklch(0.88 0.01 90);
+  --input: oklch(0.88 0.01 90);
+  --ring: var(--lapis);
+  --radius: 0.375rem; /* Small radius reads more "engineered" per §2.2 */
+
+  /* Custom Brand Tokens */
+  --brand-gold: var(--gold);
+  --brand-crimson: var(--crimson);
+}
+
+.dark {
+  /* Dark Mode adjustments */
+  --background: var(--ink);
+  --foreground: var(--paper);
+  --card: oklch(0.22 0.03 264);
+  --card-foreground: var(--paper);
+  --popover: oklch(0.22 0.03 264);
+  --popover-foreground: var(--paper);
+  --primary: var(--lapis);
+  --primary-foreground: var(--paper);
+  --secondary: oklch(0.28 0.03 264);
+  --secondary-foreground: var(--paper);
+  --muted: oklch(0.28 0.03 264);
+  --muted-foreground: var(--slate);
+  --accent: var(--gold);
+  --accent-foreground: var(--ink);
+  --destructive: var(--crimson);
+  --destructive-foreground: var(--paper);
+  --border: oklch(0.32 0.03 264);
+  --input: oklch(0.32 0.03 264);
+  --ring: var(--gold);
+}
+
+@theme inline {
+  --font-sans: 'Vazirmatn Variable', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Expose custom brand colors to Tailwind */
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-crimson: var(--brand-crimson);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+</file>
+
 <file path="src/components/sections/About/About.tsx">
 import { useT } from '@/lib/i18n/useT'
 import { MotionReveal } from '@/components/ui/MotionReveal'
@@ -6486,9 +6593,12 @@ export function Contact() {
         <MotionReveal>
           <div className="mb-16 flex items-center gap-4">
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
-              § 05 {t('contact.title')}
+              § 03
             </span>
             <div className="bg-border/40 h-px flex-1" />
+            <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
+              {t('contact.title')}
+            </span>
           </div>
         </MotionReveal>
 
@@ -6784,7 +6894,7 @@ export function Projects() {
         <MotionReveal>
           <div className="mb-16 flex items-center gap-4">
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
-              § 04
+              § 03
             </span>
             <div className="bg-border/40 h-px flex-1" />
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
@@ -6975,113 +7085,6 @@ export function Skills() {
 }
 </file>
 
-<file path="src/styles/globals.css">
-@import 'tailwindcss';
-
-@custom-variant dark (&:is(.dark *));
-
-:root {
-  /* Base Palette (Light Mode) */
-  --ink: oklch(0.17 0.03 264);
-  --paper: oklch(0.96 0.008 90);
-  --lapis: oklch(0.47 0.15 259);
-  --gold: oklch(0.8 0.12 88);
-  --crimson: oklch(0.58 0.18 26);
-  --slate: oklch(0.62 0.02 264);
-
-  /* shadcn/ui mapping (Light) */
-  --background: var(--paper);
-  --foreground: var(--ink);
-  --card: var(--paper);
-  --card-foreground: var(--ink);
-  --popover: var(--paper);
-  --popover-foreground: var(--ink);
-  --primary: var(--lapis);
-  --primary-foreground: var(--paper);
-  --secondary: oklch(0.92 0.01 90);
-  --secondary-foreground: var(--ink);
-  --muted: oklch(0.92 0.01 90);
-  --muted-foreground: var(--slate);
-  --accent: var(--gold);
-  --accent-foreground: var(--ink);
-  --destructive: var(--crimson);
-  --destructive-foreground: var(--paper);
-  --border: oklch(0.88 0.01 90);
-  --input: oklch(0.88 0.01 90);
-  --ring: var(--lapis);
-  --radius: 0.375rem; /* Small radius reads more "engineered" per §2.2 */
-
-  /* Custom Brand Tokens */
-  --brand-gold: var(--gold);
-  --brand-crimson: var(--crimson);
-}
-
-.dark {
-  /* Dark Mode adjustments */
-  --background: var(--ink);
-  --foreground: var(--paper);
-  --card: oklch(0.22 0.03 264);
-  --card-foreground: var(--paper);
-  --popover: oklch(0.22 0.03 264);
-  --popover-foreground: var(--paper);
-  --primary: var(--lapis);
-  --primary-foreground: var(--paper);
-  --secondary: oklch(0.28 0.03 264);
-  --secondary-foreground: var(--paper);
-  --muted: oklch(0.28 0.03 264);
-  --muted-foreground: var(--slate);
-  --accent: var(--gold);
-  --accent-foreground: var(--ink);
-  --destructive: var(--crimson);
-  --destructive-foreground: var(--paper);
-  --border: oklch(0.32 0.03 264);
-  --input: oklch(0.32 0.03 264);
-  --ring: var(--gold);
-}
-
-@theme inline {
-  --font-sans: 'Vazirmatn Variable', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-
-  /* Expose custom brand colors to Tailwind */
-  --color-brand-gold: var(--brand-gold);
-  --color-brand-crimson: var(--brand-crimson);
-
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-</file>
-
 <file path="src/lib/i18n/en.json">
 {
   "nav.about": "About",
@@ -7173,7 +7176,7 @@ export function Skills() {
   "hero.card.small": "همیشه در حال یادگیری",
   "hero.card.title": "ساخت محصولاتی که استفاده از آن‌ها لذت‌بخش باشد",
   "hero.card.detail": "React • TypeScript • Next.js",
-  "hero.scroll": "پایین برو",
+  "hero.scroll": "اسکرول",
 
   "about.title": "درباره من",
   "about.text": "من دانشجوی مهندسی کامپیوتر و توسعه‌دهنده فرانت‌اند هستم. بیشتر زمانم را صرف طراحی و توسعه رابط‌های کاربری می‌کنم و از تبدیل ایده‌ها به محصولات واقعی لذت می‌برم. علاوه بر توسعه وب، به الگوریتم، ساختمان داده، پردازش زبان طبیعی فارسی و یادگیری فناوری‌های جدید هم علاقه دارم. برای من برنامه‌نویسی فقط نوشتن کد نیست؛ بلکه پیدا کردن راه‌حل‌های ساده، قابل نگهداری و مؤثر برای مسائل واقعی است.",
