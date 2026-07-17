@@ -34,9 +34,14 @@ export function Hero() {
           <div className="relative mx-auto w-full sm:max-w-md">
             {/* Glowing effects - adjusted for circular shape on mobile */}
             <div className="bg-brand-gold/30 absolute -end-4 -top-4 h-24 w-24 rounded-full blur-3xl sm:-end-8 sm:-top-8 sm:h-32 sm:w-32" />
-            <div className="bg-primary/25 m:rounded-full absolute -start-4 -bottom-4 h-20 w-20 rounded-full blur-3xl sm:-start-6 sm:-bottom-6 sm:h-28 sm:w-28" />
+            {/* Fixed typo: removed m:rounded-full */}
+            <div className="bg-primary/25 absolute -start-4 -bottom-4 h-20 w-20 rounded-full blur-3xl sm:-start-6 sm:-bottom-6 sm:h-28 sm:w-28" />
 
-            <div className="border-border/70 bg-background/65 relative mx-auto h-56 w-56 overflow-hidden rounded-full border p-2 shadow-lg backdrop-blur-xl sm:h-[440px] sm:w-full sm:rounded-2xl">
+            {/* 
+              - Added aspect-square to guarantee a perfect circle on mobile
+              - Removed p-2 and used border-2 directly so the image fills the entire circle
+            */}
+            <div className="border-border/70 bg-background/65 relative mx-auto aspect-square w-56 overflow-hidden rounded-full border-2 shadow-lg backdrop-blur-xl sm:aspect-auto sm:h-[440px] sm:w-full sm:rounded-2xl">
               <div className="absolute inset-0 bg-[linear-gradient(135deg,_color-mix(in_oklch,var(--primary)_12%),transparent_45%,_color-mix(in_oklch,var(--accent)_16%),transparent_80%)]" />
               <img
                 src={myImage}

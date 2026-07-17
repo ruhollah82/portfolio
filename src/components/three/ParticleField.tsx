@@ -11,6 +11,7 @@ function pseudoRandom(seed: number): number {
   return x - Math.floor(x)
 }
 
+// شبیه‌سازی noise برای حرکت پرتنش با GLSL
 const vertexShader = /* glsl */ `
   uniform float uTime;
   uniform float uScroll;
@@ -24,20 +25,21 @@ const vertexShader = /* glsl */ `
 
   void main() {
     vColor = color;
-
     float noiseScale = 0.3;
     float noiseStrength = 0.4 + uScroll * 0.3;
     vec3 np = position * noiseScale;
-
+    
     float nx = noise3D(vec3(np.x, np.y, uTime * 0.3)) * noiseStrength;
     float ny = noise3D(vec3(np.y, np.z, uTime * 0.3)) * noiseStrength;
     float nz = noise3D(vec3(np.z, np.x, uTime * 0.3)) * noiseStrength;
-
+    
     float expansion = 1.0 + uScroll * 0.8;
     vec3 displaced = position * expansion + vec3(nx, ny, nz);
-
+    
     vec4 mvPosition = modelViewMatrix * vec4(displaced, 1.0);
-    gl_PointSize = uSize * (300.0 / -mvPosition.z);
+    
+    // 👇 تغییر ۱: ضریب 300.0 به 450.0 افزایش یافت تا پارتیکل‌ها درشت‌تر دیده شوند
+    gl_PointSize = uSize * (450.0 / -mvPosition.z);
     gl_Position = projectionMatrix * mvPosition;
   }
 `
@@ -62,10 +64,10 @@ export function ParticleField({ scrollYProgress }: ParticleFieldProps) {
   const prefersReducedMotion = useReducedMotion()
   const groupRef = useRef<THREE.Group>(null!)
 
+  // محاسبات یک بار در mounting برای کاهش بار روی CPU
   const { positions, colors } = useMemo(() => {
     const positions = new Float32Array(COUNT * 3)
     const colors = new Float32Array(COUNT * 3)
-
     const lapis = new THREE.Color('#5b8def')
     const gold = new THREE.Color('#eab308')
 
@@ -88,7 +90,6 @@ export function ParticleField({ scrollYProgress }: ParticleFieldProps) {
       colors[i * 3 + 1] = color.g
       colors[i * 3 + 2] = color.b
     }
-
     return { positions, colors }
   }, [])
 
@@ -96,7 +97,8 @@ export function ParticleField({ scrollYProgress }: ParticleFieldProps) {
     () => ({
       uTime: { value: 0 },
       uScroll: { value: 0 },
-      uSize: { value: 0.04 },
+      // 👇 تغییر ۲: مقدار پایه سایز از 0.04 به 0.08 افزایش یافت
+      uSize: { value: 0.08 },
       uOpacity: { value: 0.7 },
     }),
     []
@@ -108,12 +110,17 @@ export function ParticleField({ scrollYProgress }: ParticleFieldProps) {
     const time = state.clock.elapsedTime
     const scroll = scrollYProgress.get()
 
+    // چرخش آرام گروه پارتیکل‌ها (یک ترسیم زیبا در ۴۰۰۰ تا)
     groupRef.current.rotation.y = time * 0.08 + scroll * Math.PI * 1.5
     groupRef.current.rotation.x = Math.sin(time * 0.05) * 0.15
 
+    // آپدیت اعداد آپدیت‌شونده در هر فریم
     uniforms.uTime.value = time
     uniforms.uScroll.value = scroll
-    uniforms.uSize.value = 0.04 + scroll * 0.03
+
+    // 👇 تغییر ۳: سایز پارتیکل‌ها هنگام اسکرول بیشتر بزرگ می‌شود
+    uniforms.uSize.value = 0.08 + scroll * 0.06
+
     uniforms.uOpacity.value = 0.7 - scroll * 0.3
   })
 
