@@ -3,6 +3,7 @@ import { useT } from '@/lib/i18n/useT'
 import { Icon } from '@/components/ui/Icon'
 import { buttonVariants } from '@/components/ui/button'
 import { MotionReveal } from '@/components/ui/MotionReveal'
+import myImage from '../../../../public/images/portrait-original.jpg'
 
 const Scene = lazy(() => import('@/components/three/Scene'))
 
@@ -38,7 +39,7 @@ export function Hero() {
             <div className="border-border/70 bg-background/65 relative mx-auto h-56 w-56 overflow-hidden rounded-full border p-2 shadow-lg backdrop-blur-xl sm:h-[440px] sm:w-full sm:rounded-2xl">
               <div className="absolute inset-0 bg-[linear-gradient(135deg,_color-mix(in_oklch,var(--primary)_12%),transparent_45%,_color-mix(in_oklch,var(--accent)_16%),transparent_80%)]" />
               <img
-                src="/images/portrait.jpg"
+                src={myImage}
                 alt="Portrait of Ruhollah"
                 className="relative h-full w-full object-cover object-[center_20%]"
               />
