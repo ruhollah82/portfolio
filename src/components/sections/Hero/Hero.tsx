@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-12 sm:px-6 lg:px-8"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 py-20 sm:px-6 sm:py-24 lg:px-8"
     >
       <Suspense
         fallback={
@@ -26,21 +26,40 @@ export function Hero() {
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_color-mix(in_oklch,var(--primary)_24%),transparent_24%),radial-gradient(circle_at_bottom_right,_color-mix(in_oklch,var(--accent)_26%),transparent_22%)]" />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-        {/* تغییر ۱: lg:text-left به lg:text-start برای راست‌چین شدن خودکار در فارسی */}
+      {/* Changed from grid to flex-col on mobile, grid on desktop */}
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-10 sm:grid sm:grid-cols-[1.05fr_0.95fr] sm:items-center lg:gap-10">
+        {/* Portrait Image - Now appears FIRST on mobile (top of page) */}
+        <MotionReveal delay={0.08}>
+          <div className="relative mx-auto w-full sm:max-w-md">
+            {/* Glowing effects - adjusted for circular shape on mobile */}
+            <div className="bg-brand-gold/30 absolute -end-4 -top-4 h-24 w-24 rounded-full blur-3xl sm:-end-8 sm:-top-8 sm:h-32 sm:w-32" />
+            <div className="bg-primary/25 m:rounded-full absolute -start-4 -bottom-4 h-20 w-20 rounded-full blur-3xl sm:-start-6 sm:-bottom-6 sm:h-28 sm:w-28" />
+
+            <div className="border-border/70 bg-background/65 relative mx-auto h-56 w-56 overflow-hidden rounded-full border p-2 shadow-lg backdrop-blur-xl sm:h-[440px] sm:w-full sm:rounded-2xl">
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,_color-mix(in_oklch,var(--primary)_12%),transparent_45%,_color-mix(in_oklch,var(--accent)_16%),transparent_80%)]" />
+              <img
+                src="/images/portrait.jpg"
+                alt="Portrait of Ruhollah"
+                className="relative h-full w-full object-cover object-[center_20%]"
+              />
+            </div>
+          </div>
+        </MotionReveal>
+
+        {/* Text Content - Appears below image on mobile */}
         <div className="space-y-6 text-center lg:text-start">
-          <MotionReveal delay={0.08}>
+          <MotionReveal delay={0.12}>
             <div className="space-y-4">
-              <h1 className="text-foreground text-4xl leading-none font-black sm:text-5xl lg:text-7xl">
+              <h1 className="text-foreground text-3xl leading-none font-black sm:text-5xl lg:text-7xl">
                 {t('hero.greeting')}
               </h1>
-              <p className="text-muted-foreground mx-auto max-w-2xl text-sm leading-7 sm:text-base lg:mx-0 lg:text-lg">
+              <p className="text-muted-foreground mx-auto max-w-2xl text-sm leading-6 sm:text-base sm:leading-7 lg:mx-0 lg:text-lg">
                 {t('hero.description')}
               </p>
             </div>
           </MotionReveal>
 
-          <MotionReveal delay={0.14}>
+          <MotionReveal delay={0.16}>
             <div className="flex flex-col items-center gap-3 sm:flex-row lg:items-start">
               <a
                 href="#projects"
@@ -50,7 +69,6 @@ export function Hero() {
                 })}
               >
                 {t('hero.cta.primary')}
-                {/* تغییر ۲: اضافه کردن rtl:-scale-x-100 برای قرینه شدن فلش در حالت فارسی */}
                 <Icon
                   name="phosphor:arrow-right"
                   className="h-4 w-4 rtl:-scale-x-100"
@@ -69,8 +87,7 @@ export function Hero() {
             </div>
           </MotionReveal>
 
-          <MotionReveal delay={0.18}>
-            {/* justify-start به‌طور پیش‌فرض در RTL به سمت راست می‌چسبد */}
+          <MotionReveal delay={0.2}>
             <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
               <div className="border-border/70 bg-background/65 text-foreground/85 rounded-full border px-4 py-2 text-xs font-medium backdrop-blur-md">
                 {t('hero.role')}
@@ -81,26 +98,9 @@ export function Hero() {
             </div>
           </MotionReveal>
         </div>
-
-        <MotionReveal delay={0.12}>
-          <div className="relative mx-auto w-full max-w-md">
-            {/* تغییر ۳: استفاده از -end و -start به جای right و left برای تطابق با جهت صفحه */}
-            <div className="bg-brand-gold/30 absolute -end-8 -top-8 h-32 w-32 rounded-full blur-3xl" />
-            <div className="bg-primary/25 absolute -start-6 -bottom-6 h-28 w-28 rounded-full blur-3xl" />
-
-            <div className="border-border/70 bg-background/65 relative overflow-hidden rounded-2xl border p-3 shadow-lg backdrop-blur-xl">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,_color-mix(in_oklch,var(--primary)_12%),transparent_45%,_color-mix(in_oklch,var(--accent)_16%),transparent_80%)]" />
-              <img
-                src="/images/portrait.jpg"
-                alt="Portrait of Ruhollah"
-                className="relative h-[440px] w-full rounded-2xl object-cover object-top"
-              />
-            </div>
-          </div>
-        </MotionReveal>
       </div>
 
-      <div className="text-muted-foreground absolute bottom-12 z-10 flex animate-bounce flex-col items-center gap-2">
+      <div className="text-muted-foreground absolute bottom-8 z-10 flex animate-bounce flex-col items-center gap-2 sm:bottom-12">
         <span className="text-[11px] tracking-[0.35em] uppercase">
           {t('hero.scroll')}
         </span>

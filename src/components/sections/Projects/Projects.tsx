@@ -31,12 +31,11 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative flex min-h-screen flex-col justify-center px-6 py-32 sm:px-12 lg:px-24"
+      className="relative flex min-h-screen flex-col justify-center px-5 py-24 sm:px-12 sm:py-32 lg:px-24"
     >
       <div className="mx-auto w-full max-w-6xl">
-        {/* Editorial Header */}
         <MotionReveal>
-          <div className="mb-16 flex items-center gap-4">
+          <div className="mb-12 flex items-center gap-4 sm:mb-16">
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               § 03
             </span>
@@ -47,15 +46,13 @@ export function Projects() {
           </div>
         </MotionReveal>
 
-        {/* Subtitle */}
         <MotionReveal delay={0.05}>
-          <p className="text-muted-foreground mb-16 max-w-2xl text-base leading-relaxed md:text-lg">
+          <p className="text-muted-foreground mb-12 max-w-2xl text-base leading-relaxed sm:mb-16 md:text-lg">
             {t('projects.subtitle')}
           </p>
         </MotionReveal>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2">
           {projects.map((p, i) => (
             <MotionReveal key={p.titleKey} delay={0.1 + i * 0.06}>
               <ProjectCard

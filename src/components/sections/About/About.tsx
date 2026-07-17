@@ -16,7 +16,6 @@ function Pillar({ label, value }: { label: string; value: string }) {
 
 export function About() {
   const t = useT()
-
   const highlights = [
     t('about.highlight.react'),
     t('about.highlight.motion'),
@@ -26,12 +25,11 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col justify-center px-6 py-32 sm:px-12 lg:px-24"
+      className="relative flex min-h-screen flex-col justify-center px-5 py-24 sm:px-12 sm:py-32 lg:px-24"
     >
       <div className="mx-auto w-full max-w-6xl">
-        {/* Editorial Header */}
         <MotionReveal>
-          <div className="mb-20 flex items-center gap-4">
+          <div className="mb-12 flex items-center gap-4 sm:mb-20">
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               § 01
             </span>
@@ -42,23 +40,18 @@ export function About() {
           </div>
         </MotionReveal>
 
-        <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:gap-24">
-          {/* Main Statement */}
+        <div className="grid gap-12 sm:gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:gap-24">
           <MotionReveal delay={0.1}>
             <div className="space-y-8">
-              <h2 className="text-foreground max-w-2xl text-3xl leading-[1.3] font-light tracking-tight sm:text-3xl md:text-4xl">
+              <h2 className="text-foreground max-w-2xl text-2xl leading-[1.3] font-light tracking-tight sm:text-3xl md:text-4xl">
                 {t('about.text')}
               </h2>
-
-              {/* Gold accent line */}
               <div className="bg-brand-gold/60 h-px w-16" />
             </div>
           </MotionReveal>
 
-          {/* Side Content */}
           <MotionReveal delay={0.2}>
             <div className="space-y-12">
-              {/* Signature Focus - Editorial List */}
               <div className="space-y-6">
                 <p className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
                   {t('about.signatureFocus')}
@@ -80,7 +73,6 @@ export function About() {
                 </ul>
               </div>
 
-              {/* Three Pillars */}
               <div className="space-y-0">
                 <Pillar label={t('about.craft')} value={t('about.craftDesc')} />
                 <Pillar

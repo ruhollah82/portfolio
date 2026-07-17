@@ -4,7 +4,6 @@ import { MotionReveal } from '@/components/ui/MotionReveal'
 
 export function Contact() {
   const t = useT()
-
   const socials = [
     {
       name: 'GitHub',
@@ -26,20 +25,18 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex min-h-screen flex-col justify-center px-6 py-32 sm:px-12 lg:px-24"
+      className="relative flex min-h-screen flex-col justify-center px-5 py-24 sm:px-12 sm:py-32 lg:px-24"
     >
-      {/* Subtle ambient glow (much softer than before for a premium feel) */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="bg-primary/5 absolute top-1/4 -right-32 h-[500px] w-[500px] rounded-full blur-[120px]" />
         <div className="bg-accent/5 absolute bottom-1/4 -left-32 h-[400px] w-[400px] rounded-full blur-[100px]" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl">
-        {/* Editorial Header */}
         <MotionReveal>
-          <div className="mb-16 flex items-center gap-4">
+          <div className="mb-12 flex items-center gap-4 sm:mb-16">
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
-              § 03
+              § 04
             </span>
             <div className="bg-border/40 h-px flex-1" />
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
@@ -48,22 +45,18 @@ export function Contact() {
           </div>
         </MotionReveal>
 
-        {/* Fluid Layout (No rigid grids) */}
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:justify-between lg:gap-24">
-          {/* Left: Primary CTA (Typography-focused) */}
+        <div className="flex flex-col gap-12 sm:gap-16 lg:flex-row lg:items-start lg:justify-between lg:gap-24">
           <MotionReveal delay={0.1} className="flex-1">
             <p className="text-muted-foreground/80 mb-4 text-xs tracking-[0.3em] uppercase">
               {t('contact.email')}
             </p>
-
             <a href="mailto:ruhollah.naserii@gmail.com" className="group block">
-              <h2 className="text-foreground group-hover:text-primary text-4xl font-light tracking-tight transition-colors duration-500 sm:text-5xl md:text-6xl lg:text-7xl">
+              <h2 className="text-foreground group-hover:text-primary text-3xl font-light tracking-tight transition-colors duration-500 sm:text-5xl md:text-6xl lg:text-7xl">
                 ruhollah.naserii
                 <br className="hidden sm:block" />
                 @gmail.com
               </h2>
-
-              <div className="text-muted-foreground group-hover:text-primary mt-8 flex items-center gap-3 text-sm font-medium transition-colors duration-500">
+              <div className="text-muted-foreground group-hover:text-primary mt-6 flex items-center gap-3 text-sm font-medium transition-colors duration-500 sm:mt-8">
                 <span>{t('hero.cta.secondary')}</span>
                 <Icon
                   name="phosphor:arrow-right"
@@ -71,15 +64,12 @@ export function Contact() {
                 />
               </div>
             </a>
-
-            <p className="text-foreground/60 mt-10 max-w-md text-sm leading-relaxed font-light">
+            <p className="text-foreground/60 mt-8 max-w-md text-sm leading-relaxed font-light sm:mt-10">
               {t('contact.text')}
             </p>
           </MotionReveal>
 
-          {/* Right: Secondary Actions (Minimal List) */}
           <MotionReveal delay={0.2} className="w-full lg:w-80">
-            {/* Resume Download */}
             <a
               href="/resume.pdf"
               download
@@ -100,7 +90,6 @@ export function Contact() {
               />
             </a>
 
-            {/* Social Links Stack (Hairline separated) */}
             <div className="mt-2">
               {socials.map((social) => (
                 <a
@@ -120,7 +109,6 @@ export function Contact() {
                   />
                 </a>
               ))}
-              {/* Closing line for visual balance */}
               <div className="bg-border/40 h-px w-full" />
             </div>
           </MotionReveal>

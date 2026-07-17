@@ -52,7 +52,6 @@ const skillGroups: SkillGroup[] = [
   },
 ]
 
-// تغییر ۱: دریافت تابع t برای ترجمه برچسب‌ها
 function getLevelLabel(level: number, t: (key: string) => string): string {
   if (level >= 90) return t('skills.level.expert')
   if (level >= 75) return t('skills.level.advanced')
@@ -71,7 +70,6 @@ function SkillColumn({
 }) {
   return (
     <div className="space-y-5">
-      {/* Header */}
       <div className="border-border/40 flex items-baseline gap-3 border-b pb-4">
         <span className="text-muted-foreground/50 text-[10px] tracking-widest">
           0{index + 1}
@@ -81,7 +79,6 @@ function SkillColumn({
         </h3>
       </div>
 
-      {/* Skills list */}
       <ul className="space-y-0">
         {group.items.map((skill) => (
           <li
@@ -91,7 +88,6 @@ function SkillColumn({
             <span className="text-foreground/90 group-hover/item:text-foreground text-sm font-light tracking-wide transition-colors">
               {skill.name}
             </span>
-            {/* تغییر ۲: ارسال تابع t به getLevelLabel */}
             <span className="text-muted-foreground/60 text-[10px] tracking-widest uppercase">
               {getLevelLabel(skill.level, t)}
             </span>
@@ -108,12 +104,11 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="relative flex min-h-screen flex-col justify-center px-6 py-32 sm:px-12 lg:px-24"
+      className="relative flex min-h-screen flex-col justify-center px-5 py-24 sm:px-12 sm:py-32 lg:px-24"
     >
       <div className="mx-auto w-full max-w-6xl">
-        {/* Editorial Header */}
         <MotionReveal>
-          <div className="mb-20 flex items-center gap-4">
+          <div className="mb-12 flex items-center gap-4 sm:mb-20">
             <span className="text-muted-foreground/60 text-[10px] tracking-[0.4em] uppercase">
               § 02
             </span>
@@ -124,11 +119,9 @@ export function Skills() {
           </div>
         </MotionReveal>
 
-        {/* Main Statement */}
         <MotionReveal delay={0.08}>
-          <div className="mb-20 max-w-3xl">
-            <h2 className="text-foreground text-3xl leading-[1.3] font-light tracking-tight sm:text-3xl md:text-4xl">
-              {/* تغییر ۳: استفاده از کلیدهای ترجمه برای حفظ استایل <em> */}
+          <div className="mb-12 max-w-3xl sm:mb-20">
+            <h2 className="text-foreground text-2xl leading-[1.3] font-light tracking-tight sm:text-3xl md:text-4xl">
               {t('skills.statement.prefix')}
               <em className="text-brand-gold font-normal not-italic">
                 {t('skills.statement.highlight')}
@@ -138,8 +131,7 @@ export function Skills() {
           </div>
         </MotionReveal>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-8">
           {skillGroups.map((group, i) => (
             <MotionReveal key={group.key} delay={0.12 + i * 0.06}>
               <SkillColumn group={group} index={i} t={t} />
