@@ -1,12 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Ruhollah | Frontend Developer & CS Student</title>
+    <meta name="title" content="Ruhollah | Frontend Developer & CS Student" />
+    <meta
+      name="description"
+      content="Portfolio of Ruhollah, a Frontend Developer and CS Student specializing in Persian NLP, React 3D engineering, and modern web applications."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ruhollah.dev/" />
+    <meta
+      property="og:title"
+      content="Ruhollah | Frontend Developer & CS Student"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Ruhollah, specializing in Persian NLP, React 3D engineering, and modern web applications."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <!-- Add a static screenshot later -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ruhollah.dev/" />
+    <meta
+      property="twitter:title"
+      content="Ruhollah | Frontend Developer & CS Student"
+    />
+    <meta
+      property="twitter:description"
+      content="Portfolio of Ruhollah, specializing in Persian NLP, React 3D engineering, and modern web applications."
+    />
+    <meta property="twitter:image" content="/og-image.png" />
+
+    <!-- Preload Critical Fonts -->
+    <link
+      rel="preload"
+      href="/node_modules/@fontsource-variable/vazirmatn/files/vazirmatn-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ruhollah",
+        "jobTitle": "Frontend Developer & CS Student",
+        "url": "https://ruhollah.dev",
+        "sameAs": [
+          "https://github.com/yourusername",
+          "https://linkedin.com/in/yourusername"
+        ]
+      }
+    </script>
   </head>
   <body>
+    <!-- Noscript Fallback for SEO/JS-disabled -->
+    <noscript>
+      <div style="padding: 2rem; font-family: sans-serif; text-align: center">
+        <h1>Ruhollah</h1>
+        <p>Frontend Developer · CS Student · Persian NLP</p>
+        <p>
+          I build modern, accessible web applications and explore the
+          intersection of heritage scripts and contemporary tooling.
+        </p>
+        <p>
+          Contact: <a href="mailto:hello@ruhollah.dev">hello@ruhollah.dev</a>
+        </p>
+      </div>
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

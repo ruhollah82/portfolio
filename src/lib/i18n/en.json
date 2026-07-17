@@ -5,7 +5,15 @@
   "nav.contact": "Contact",
 
   "hero.greeting": "Hello, I'm Ruhollah.",
+  "hero.kicker": "Creative Frontend Developer",
   "hero.role": "Frontend Developer · CS Student · Persian NLP",
+  "hero.description": "I craft immersive, high-performance interfaces where design, language, and engineering meet. From React experiences to 3D motion and multilingual UI, I build digital work that feels thoughtful and alive.",
+  "hero.cta.primary": "View Projects",
+  "hero.cta.secondary": "Let's Talk",
+  "hero.cardLabel": "Available for new work",
+  "hero.card.small": "Now building",
+  "hero.card.title": "Modern products with personality",
+  "hero.card.detail": "3D • Web • NLP",
   "hero.scroll": "Scroll",
 
   "about.title": "About",
