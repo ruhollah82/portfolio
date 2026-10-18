@@ -1,5 +1,5 @@
 import { useT } from '@/lib/i18n/useT'
-import { MotionReveal } from '@/components/ui/MotionReveal'
+import { MotionReveal, RevealGroup, RevealItem } from '@/components/ui/MotionReveal'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 
 // Plain stack lists. Self-assigned percentage ratings ("React 95") were removed:
@@ -86,13 +86,13 @@ export function Skills() {
           </p>
         </MotionReveal>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <RevealGroup className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {skillGroups.map((group, i) => (
-            <MotionReveal key={group.key} delay={0.05 + i * 0.04}>
+            <RevealItem key={group.key} blur={6}>
               <SkillColumn groupKey={group.key} items={group.items} index={i} />
-            </MotionReveal>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   )

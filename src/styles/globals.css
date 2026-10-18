@@ -105,9 +105,9 @@
     -webkit-text-size-adjust: 100%;
   }
 
-  /* Native smooth scrolling, only for people who haven't opted out of motion. */
+  /* Native smooth scrolling only when Lenis is not running. */
   @media (prefers-reduced-motion: no-preference) {
-    html {
+    html:not(.lenis) {
       scroll-behavior: smooth;
     }
   }
@@ -159,4 +159,16 @@ html[lang='fa'] :is(h1, h2, h3) {
 
 html[lang='fa'] p {
   line-height: 1.9;
+}
+
+/* Lenis recommended rules */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
 }

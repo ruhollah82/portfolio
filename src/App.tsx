@@ -1,4 +1,5 @@
 import { Providers } from './app/providers'
+import { SmoothScroll } from './components/ui/SmoothScroll'
 import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
 import { Hero } from './components/sections/Hero/Hero'
@@ -38,6 +39,7 @@ function AppContent() {
 export default function App() {
   return (
     <Providers>
+      <SmoothScroll />
       <AppContent />
     </Providers>
   )

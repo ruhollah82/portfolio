@@ -9,7 +9,7 @@ interface SectionHeaderProps {
 // The title is the real <h2>; the number is decoration.
 export function SectionHeader({ index, title }: SectionHeaderProps) {
   return (
-    <MotionReveal>
+    <MotionReveal blur={6}>
       <div className="mb-12 flex items-center gap-4 sm:mb-16">
         <span className="eyebrow" aria-hidden>
           {index}

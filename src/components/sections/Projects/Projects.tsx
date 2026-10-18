@@ -1,6 +1,6 @@
 import { useT } from '@/lib/i18n/useT'
 import { ProjectCard } from './ProjectCard'
-import { MotionReveal } from '@/components/ui/MotionReveal'
+import { MotionReveal, RevealGroup, RevealItem } from '@/components/ui/MotionReveal'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 
 const projects = [
@@ -47,13 +47,9 @@ export function Projects() {
           </p>
         </MotionReveal>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <RevealGroup className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
-            <MotionReveal
-              key={p.titleKey}
-              delay={0.05 + i * 0.04}
-              className="h-full"
-            >
+            <RevealItem key={p.titleKey} blur={6} className="h-full">
               <ProjectCard
                 index={i + 1}
                 title={t(p.titleKey)}
@@ -62,9 +58,9 @@ export function Projects() {
                 href={p.link || undefined}
                 linkLabel={t('projects.viewCode')}
               />
-            </MotionReveal>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   )
